@@ -1,0 +1,6 @@
+[submodule "src/navigation"]
+	path = src/navigation
+	url = https://github.com/ros-planning/navigation.git
+[submodule "src/teb_local_planner"]
+	path = src/teb_local_planner
+	url = https://github.com/rst-tu-dortmund/teb_local_planner.git
