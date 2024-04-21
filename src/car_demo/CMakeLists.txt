@@ -19,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   geometry_msgs
   gazebo_ros
+  joy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -114,7 +115,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES car_demo
  CATKIN_DEPENDS gmapping map_server move_base roscpp rviz urdf xacro xboxseries_joy
-                sensor_msgs geometry_msgs gazebo_ros
+                sensor_msgs geometry_msgs gazebo_ros joy
 #  DEPENDS system_lib
 )
 
