@@ -1,7 +1,7 @@
 TebLocalPlannerROS:
 
   odom_topic: odom  #里程计话题
-  map_frame: /odom  #全局路径规划框架
+  map_frame: /map  #全局路径规划框架
     
   # Trajectory 轨迹配置参数
 
@@ -74,7 +74,7 @@ TebLocalPlannerROS:
   weight_acc_lim_x: 1
   weight_acc_lim_theta: 1
   weight_kinematics_nh: 1000
-  weight_kinematics_forward_drive: 1 #1
+  weight_kinematics_forward_drive: 1000 #1
   weight_kinematics_turning_radius: 1
   weight_optimaltime: 1
   weight_obstacle: 50
