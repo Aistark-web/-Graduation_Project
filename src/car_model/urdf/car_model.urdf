@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="car_model">
+  <link name="base_footprint">
+  </link>
+  <link
+    name="car_link">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 2.7756E-17 0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.31036" />
+      <inertia
+        ixx="0.0016104"
+        ixy="1.4988E-19"
+        ixz="8.5178E-21"
+        iyy="0.0016081"
+        iyz="1.348E-21"
+        izz="0.0032173" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/car_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.9098 0.83137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/car_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_footprint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="car_link"/>
+  </joint>
+  <link
+    name="LF_Hub_link">
+    <inertial>
+      <origin
+        xyz="-1.0059E-05 0.0082366 -0.0071873"
+        rpy="0 0 0" />
+      <mass
+        value="0.0084323" />
+      <inertia
+        ixx="2.5589E-06"
+        ixy="-8.2589E-10"
+        ixz="7.3689E-10"
+        iyy="2.3651E-06"
+        iyz="7.504E-07"
+        izz="2.4214E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LF_Hub_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LF_Hub_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="car2LF_Hub"
+    type="fixed">
+    <origin
+      xyz="0.106 0.1075 -0.003"
+      rpy="0 0 0" />
+    <parent
+      link="car_link" />
+    <child
+      link="LF_Hub_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LF_Wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.0291348289900235 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0976667159877332" />
+      <inertia
+        ixx="3.17417948796353E-05"
+        ixy="-9.14387225326459E-22"
+        ixz="-2.80586556949772E-22"
+        iyy="4.32896914021948E-05"
+        iyz="-1.16131060268526E-21"
+        izz="3.17417948796353E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LF_Wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LF_Wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_Hub2LF_Wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.0169999999999998 -0.025"
+      rpy="0 0 0" />
+    <parent
+      link="LF_Hub_link" />
+    <child
+      link="LF_Wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RF_Hub_link">
+    <inertial>
+      <origin
+        xyz="1.0059E-05 -0.0082366 -0.0071873"
+        rpy="0 0 0" />
+      <mass
+        value="0.0084323" />
+      <inertia
+        ixx="2.5589E-06"
+        ixy="-8.2589E-10"
+        ixz="-7.3689E-10"
+        iyy="2.3651E-06"
+        iyz="-7.504E-07"
+        izz="2.4214E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RF_Hub_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RF_Hub_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="car2RF_Hub"
+    type="fixed">
+    <origin
+      xyz="0.106 -0.1075 -0.003"
+      rpy="0 0 0" />
+    <parent
+      link="car_link" />
+    <child
+      link="RF_Hub_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RF_Wheel_link">
+    <inertial>
+      <origin
+        xyz="0 -0.0291348289900234 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0976667159877333" />
+      <inertia
+        ixx="3.17417948796353E-05"
+        ixy="-1.32724821511672E-21"
+        ixz="3.55254772210564E-21"
+        iyy="4.32896914021949E-05"
+        iyz="-2.48749113526877E-21"
+        izz="3.17417948796353E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RF_Wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RF_Wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_Hub2RF_Wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.017 -0.025"
+      rpy="0 0 0" />
+    <parent
+      link="RF_Hub_link" />
+    <child
+      link="RF_Wheel_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="LB_Hub_link">
+    <inertial>
+      <origin
+        xyz="-1.00592687205803E-05 0.00823663928394838 -0.0071873491149865"
+        rpy="0 0 0" />
+      <mass
+        value="0.00843232286599733" />
+      <inertia
+        ixx="2.55893809066051E-06"
+        ixy="-8.25890970017699E-10"
+        ixz="7.36887028287895E-10"
+        iyy="2.36512355178143E-06"
+        iyz="7.50399636930142E-07"
+        izz="2.42141028264682E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LB_Hub_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LB_Hub_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="car2LB_Hub"
+    type="fixed">
+    <origin
+      xyz="-0.104 0.1075 -0.003"
+      rpy="0 0 0" />
+    <parent
+      link="car_link" />
+    <child
+      link="LB_Hub_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LB_Wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.0291348289900235 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0976667159877332" />
+      <inertia
+        ixx="3.17417948796353E-05"
+        ixy="-3.80242814885347E-22"
+        ixz="-2.27111915287599E-22"
+        iyy="4.32896914021948E-05"
+        iyz="2.27378507538525E-21"
+        izz="3.17417948796353E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LB_Wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/LB_Wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LB_Hub2LB_Wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.0170000000000003 -0.0250000000000002"
+      rpy="0 0 0" />
+    <parent
+      link="LB_Hub_link" />
+    <child
+      link="LB_Wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RB_Hub_link">
+    <inertial>
+      <origin
+        xyz="1.0059268720497E-05 -0.00823663928394833 -0.00718734911498652"
+        rpy="0 0 0" />
+      <mass
+        value="0.00843232286599734" />
+      <inertia
+        ixx="2.55893809066052E-06"
+        ixy="-8.25890970018213E-10"
+        ixz="-7.36887028287664E-10"
+        iyy="2.36512355178143E-06"
+        iyz="-7.50399636930146E-07"
+        izz="2.42141028264682E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RB_Hub_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RB_Hub_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="car2RB_Hub"
+    type="fixed">
+    <origin
+      xyz="-0.104 -0.1075 -0.003"
+      rpy="0 0 0" />
+    <parent
+      link="car_link" />
+    <child
+      link="RB_Hub_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RB_Wheel_link">
+    <inertial>
+      <origin
+        xyz="0 -0.0291348289900234 -3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0976667159877333" />
+      <inertia
+        ixx="3.17417948796353E-05"
+        ixy="-2.8982947791865E-21"
+        ixz="-1.06512557810242E-21"
+        iyy="4.32896914021948E-05"
+        iyz="-5.79343119752682E-22"
+        izz="3.17417948796353E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RB_Wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/RB_Wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RB_Hub2RB_Wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.017 -0.025"
+      rpy="0 0 0" />
+    <parent
+      link="RB_Hub_link" />
+    <child
+      link="RB_Wheel_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <!-- <link
+    name="Shim_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/Shim_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/Shim_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="car2Shim"
+    type="fixed">
+    <origin
+      xyz="0.056999 0 0.005"
+      rpy="0 0 0" />
+    <parent
+      link="car_link" />
+    <child
+      link="Shim_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint> -->
+  <!-- <link
+    name="Lidar_link">
+    <inertial>
+      <origin
+        xyz="-9.42063322728753E-05 -8.40265579690053E-05 -0.0166017099082987"
+        rpy="0 0 0" />
+      <mass
+        value="0.0324074072544886" />
+      <inertia
+        ixx="1.07844929576609E-05"
+        ixy="2.43580026216804E-09"
+        ixz="-4.20827393221439E-09"
+        iyy="1.0840997896253E-05"
+        iyz="-1.61412034139863E-08"
+        izz="1.96321691985343E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/Lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/Lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shim2Lidar"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0365963779573637"
+      rpy="0 0 0" />
+    <parent
+      link="Shim_link" />
+    <child
+      link="Lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint> -->
+  <link
+    name="Lidar_link">
+    <inertial>
+      <origin
+        xyz="-9.42063322728753E-05 -8.40265579690053E-05 -0.0166017099082987"
+        rpy="0 0 0" />
+      <mass
+        value="0.0324074072544886" />
+      <inertia
+        ixx="1.07844929576609E-05"
+        ixy="2.43580026216804E-09"
+        ixz="-4.20827393221439E-09"
+        iyy="1.0840997896253E-05"
+        iyz="-1.61412034139863E-08"
+        izz="1.96321691985343E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/Lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_model/meshes/Lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="car2Lidar"
+    type="fixed">
+    <origin
+      xyz="-0.025 0 0.13035"
+      rpy="0 0 0" />
+    <parent
+      link="car_link" />
+    <child
+      link="Lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

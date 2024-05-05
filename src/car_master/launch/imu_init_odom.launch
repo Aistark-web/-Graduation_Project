@@ -1,0 +1,8 @@
+<launch>
+    <!-- 启动IMU -->
+    <include file="$(find car_master)/launch/imu.launch" />
+    <node pkg="car_master" type="imu_init_odom_node" name="imu_init_odom_node" output="screen">
+        <param name="imu_topic" value="imu_data" />
+        <param name="imu_init_odom_topic" value="imu_init_odom" />
+    </node>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find rosserial_self_launch)/launch/start_rosserial.launch" >
+        <arg name="port_name" default="/dev/ttyS7" />
+    </include>
+</launch>

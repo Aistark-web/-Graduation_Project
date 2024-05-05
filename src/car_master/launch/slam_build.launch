@@ -1,0 +1,12 @@
+<launch>
+    <!-- 加载机器人模型并发布相关坐标关系 -->
+    <include file="$(find car_master)/launch/car_base.launch" />
+    <!-- 启动思岚c1雷达 -->
+    <include file="$(find car_master)/launch/rplidar_c1.launch" />
+    <!-- IMU初始里程计 -->
+    <!-- <include file="$(find car_master)/launch/imu_init_odom.launch" /> -->
+    <!-- 激光里程计 -->
+    <include file="$(find car_master)/launch/rf2o_laser_odometry.launch" />
+    <!-- 激光建图 -->
+    <include file="$(find car_master)/launch/slam_karto.launch" />
+</launch>
